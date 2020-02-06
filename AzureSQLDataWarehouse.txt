@@ -1,3 +1,5 @@
+https://docs.microsoft.com/en-us/learn/certifications/azure-data-engineer?tab=tab-learning-paths
+
 Lake Storage
 Azure Data Lake Storage
 HDInsight, Hadoop, Cloudera, Azure Databricks, and Hortonworks.
