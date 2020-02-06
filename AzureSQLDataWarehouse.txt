@@ -1,1 +1,71 @@
+Lake Storage
+Azure Data Lake Storage
+HDInsight, Hadoop, Cloudera, Azure Databricks, and Hortonworks.
+An optimized Azure Blob File System (ABFS) driver that's designed for big-data analytics
+
+Data ingestion
+AzCopy supports a maximum file size of 1 TB and automatically splits data files that exceed 200 GB.
+to import file sizes above 2 GB, use PowerShell or Visual Studio.
+
+Azure COSMOS 
+
+Data ingestion
+Azure Data Factory, create an application that writes data into Azure Cosmos DB through its API, upload JSON documents, or directly edit the document.
+
+Queries
+As a data engineer, you can create stored procedures, triggers, and user-defined functions (UDFs). Or use the JavaScript query API. 
+Azure Cosmos DB. For example, in the Data Explorer component, you can use the graph visualization pane.
+
+
+SQL Data Warehouse
+
+Storage is separated from the compute nodes
+Data Movement Service (DMS) coordinates and transports data between compute nodes as necessary.
+SQL Data Warehouse supports two types of distributed tables: hash and round-robin. Use these tables to tune performance.
+
+Load:
+bcp , SQLBulkCopy, PolyBase , Azure Data Factory to ingest and process data. 
+Transact-SQL   WHERE, ORDER BY, and GROUP BY clauses. Load data fast by using PolyBase with additional Transact-SQL constructs such as CREATE TABLE and AS SELECT.
+
+IOT
+Azure Event Hubs, Azure IoT Hub, and Azure Blob storage.
+Azure Event Hubs Bidirectional, partitioned consumer model, hese include Databricks, Stream Analytics, Azure Data Lake Storage, and HDInsight. 
+run batch analytics in Azure HDInsight. 
+
+Security: authentication through a shared key.
+
+HDInsight
+HDInsight is a low-cost cloud solution. It includes Apache Hadoop, Spark, Kafka, HBase, Storm, and Interactive Query.
+orchestrate Hive queries in Azure Data Factory.
+use Java and Python to process big data.
+Developers can remotely submit and monitor jobs from Spark. Storm supports common programming languages like Java, C#, and Python.
+
+Databricks
+Databricks adds capabilities to Apache Spark, including fully managed Spark clusters and an interactive workspace. You can use REST APIs to program clusters.
+
+Data Factory processes and transforms data by using compute services such as Azure HDInsight, Hadoop, Spark, and Azure Machine Learning. output to Azure SQL Data Warehouse 
+use Data Factory to organize raw data into meaningful data stores and data lakes. 
+
+Data Catalog
+fully managed cloud service. Users discover and explore data sources,  organization document information about their data sources.
+
+Example case study:
+
+Azure IoT Hub to capture real-time data from the ICU's IoT devices.
+Azure Stream Analytics to stream and enrich the IoT data, to create windows and aggregations, and to integrate Azure Machine Learning.
+Azure Data Lake Storage Gen2 to store the biometric data at high speed.
+Azure Data Factory to perform the extract, load, transform, and load (ELTL) process to move the data from the data lake store to Azure SQL Data Warehouse.
+Azure SQL Data Warehouse to provide data warehousing services to support the chief medical officer's needs.
+Power BI to create the patient dashboard. Part of the dashboard will show real-time telemetry about the patient's condition. The other part will show the patient's recent history.
+Azure Machine Learning to process both raw and aggregated data. Researchers will use this to perform predictive analytics on patient readmittance.
+
+
+The holistic workflow:
+
+Set up Azure IoT Hub to capture data from the ICU IoT devices.
+Connect Azure IoT Hub to Azure Stream Analytics. Set up window-creation functions for the ICU data. The functions will aggregate the data for each window. At the same time, set up the IoT Hub to move the streaming data to Azure Data Lake Storage by using Azure Functions.
+Set up Azure Functions to store the Azure Stream Analytics aggregates in Azure Data Lake Storage Gen2.
+Use Azure Data Factory to load data from the data lake into Azure SQL Data Warehouse to support the chief medical officer's needs. After the data is loaded, transformations can occur within Azure SQL Data Warehouse.
+In parallel, connect the Azure Machine Learning service to Azure Data Lake Storage to perform predictive analytics.
+Connect Power BI to Stream Analytics to pull the real-time aggregates for the patient data. Connect SQL Data Warehouse to pull the historical data to create a combined dashboard.
 
